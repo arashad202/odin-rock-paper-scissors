@@ -1,3 +1,6 @@
+// initialize scores
+let humanScore = 0;
+let computerScore = 0;
 
 // Create a function getComputerChoice
 function getComputerChoice() {
@@ -25,5 +28,3 @@ function getHumanChoice() {
     // return human choice
     return choice;
 }
-
-console.log(getHumanChoice());
