@@ -15,3 +15,15 @@ function getComputerChoice() {
     }
 
 }
+
+// Create a function getHumanChoice
+
+function getHumanChoice() {
+    // prompt the user for input (choice)
+    let choice = prompt("Enter your choice: ");
+
+    // return human choice
+    return choice;
+}
+
+console.log(getHumanChoice());
