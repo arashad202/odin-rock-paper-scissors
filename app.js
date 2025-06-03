@@ -28,3 +28,41 @@ function getHumanChoice() {
     // return human choice
     return choice;
 }
+
+// Create function playRound
+
+function playRound(humanChoice, computerChoice) {
+
+    let h = humanChoice.toLowerCase();
+    let c = computerChoice;
+
+    if (h == c) {
+        console.log("It's a Tie");
+    }
+
+    // R-P / R-S / P-R / P-S / S-R / S-P
+
+    if (h == 'rock' && c == 'paper') {
+        console.log("You lose! Paper beats Rock");
+        computerScore++;
+    } else if (h == 'rock' && c == 'scissors') {
+        console.log("You win! Rock beats Scissors");
+        humanScore++;
+    } else if (h == 'paper' && c == 'rock') {
+        console.log('You win! Paper beats Rock');
+        humanScore++;
+    } else if (h == 'paper' && c == 'Scissors') {
+        console.log('You lose! scissors beats Paper');
+        computerScore++;
+    } else if (h == 'scissors' && c == 'rock') {
+        console.log("You lose! Rock beats Scissors");
+        computerScore++;
+    } else if (h == 'scissors' && c == 'paper') {
+        console.log("You win! Scissors beats Paper");
+        humanScore++;
+    }
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
